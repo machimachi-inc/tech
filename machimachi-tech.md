@@ -2,30 +2,33 @@
 # アプリケーション
 
 ## サーバー
-- Ruby
-- Rails
-- RSpec
+- Ruby 2.6 (随時最新バージョンに更新)
+- Rails 5.2 (随時最新バージョンに更新)
 - Sidekiq
+- RSpec
+    - See [立ち上げ期スタートアップのテスト方針（Ruby on Rails編）](https://tech.machimachi.com/entry/2018/07/24/141144)
 - etc.
 
 ## クライアント
 - React.js
-  -   ReduxなどFlux Architectureは採用していない
+  - ReduxなどFlux Architectureは採用していない
 - Flowtype
-    - anyを使わないで型検査による品質保証を頑張る
+  - anyを使わないで型検査による品質保証を頑張る
 - Jest
-    - 型検査とE2Eテストでカバーできない挙動が難しいコンポーネントは書く
+  - 型検査とE2Eテストでカバーできない挙動が難しいコンポーネントは書く
 - ES2017
 - JavaScriptはWebpacker、CSSはSprocketsでコンパイル
-    - Sassでgrubを使っているので、Webpackerに移行できず
+  - Sassでgrubを使っているので、Webpackerに移行できず
 - Sass(SCSS)
-    - styled-components, css modulesなどは未使用
+  - styled-components, css modulesなどは未使用
 - 情報ポータル・ランディングページ系
-    - CDNに乗せる前提でステートレスに書いている
-    - JavaScriptは最小限
-
+  - CDNに乗せる前提でステートレスに書いている
+  - JavaScriptは最小限
+  - SEOも重視
 
 サーバー(rubygems)、クライアント(npm packages)共にライブラリは自動でPRを出してアップグレードしている
+
+gemにバグや非互換があれば事前に気づける程度までテストのカバレッジを高め、自信を持ってリリース
 
 Rubyは緩めに設定したRubocop、JS/CSSはprettierで整形するPRを自動化している
 
@@ -68,12 +71,18 @@ Rubyは緩めに設定したRubocop、JS/CSSはprettierで整形するPRを自�
 
 # 静的アセットなど
 - AWS S3
-- Cloudflare
-- Fastly (辞めつつある)
+  - アップロードファイル
+- GCS + Google Cloud CDN
+  - 静的アセット
+- Cloudflare Workers
+  - CDN
 
 # DNS
-- AWS Route53
 - Cloudflare
+  - machimachi.comおよび開発用のドメイン管理
+- AWS Route 53
+  - コーポレート・ビジネスサイドのドメイン管理
+  - Routefileで管理
 
 # 開発環境
 - rbenv
@@ -87,6 +96,7 @@ Rubyは緩めに設定したRubocop、JS/CSSはprettierで整形するPRを自�
 
 # ユーザー行動ログ
 - Mixpanel
+- Google Analytics
 - サーバー、クライアント両方から送っている
 
 # ログ
@@ -99,12 +109,12 @@ Rubyは緩めに設定したRubocop、JS/CSSはprettierで整形するPRを自�
 - Accrete
 
 # エラー検知
-- BugSnag
+- Bugsnag
 
 # 分析
 - BigQuery
   - Embulkを使ってPostgreSQLとMixpanelのデータを日次でBigQueryにエクスポートしている
-  - 視覚化はGoogle Data StudioとGoogle Spreadsheet
+  - 視覚化はGoogle Data StudioとGoogle Spreadsheets
 
 # タスクランナー
 - Jenkins
@@ -126,7 +136,10 @@ Rubyは緩めに設定したRubocop、JS/CSSはprettierで整形するPRを自�
     - react-railsがあった（現在は使っていない）
 - なぜPostgreSQL
   - ほぼ間違いなく地理情報を扱う必要があるので
+    - PostGISはとても強い
   - Rails業界で広く使われている
+  - 機能が豊富で急な用件にも困らない
+  - 早くからUUID、JSON(JSONB)などをネイティブサポート
 - なぜHeroku
   - CTOの前職でのノウハウがある
   - サーバー構築・管理のコストを外出しできる
