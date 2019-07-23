@@ -55,7 +55,7 @@ Rubyは緩めに設定したRubocop、JS/CSSはprettierで整形するPRを自�
 - Google App Engine
 
 # CI
-- CircleCI 2.0
+- CircleCI 2.1
 
 # デプロイ
 
