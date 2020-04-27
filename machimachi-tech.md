@@ -92,6 +92,7 @@ Rubyは緩めに設定したRubocop、JS/CSSはprettierで整形するPRを自�
 
 - Jenkins
   - 記録が残る、通知が出来る、設定を変更しやすいなど便利なので、Jenkinsから実行している
+  - 通知配信など、長時間掛かるタスクはSidekiqからここに投げて実行し、デプロイに伴うリスタートなどの影響を受けないようにしている
 - sidekiq-scheduler
   - 頻度が高いものはsidekiq-schedulerを使っている
 
