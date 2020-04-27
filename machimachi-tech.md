@@ -131,6 +131,7 @@ Rubyは緩めに設定したRubocop、JS/CSSはprettierで整形するPRを自�
 
 # メール
 - SendGrid
+  - WebhookからCloud Functions経由でBigQueryにイベントログを保存している
 
 # SMS
 - Accrete
