@@ -68,7 +68,9 @@ Rubyは緩めに設定したRubocop、JS/CSSはprettierで整形するPRを自�
   - Railsのキャッシュ
   - on Memcached Cloud
 - Elasticsearch
-  - ニュースの地域判定、住所検索
+  - 住所検索
+  - プレイス検索
+  - ニュースの地域判定
   - on Elastic Cloud
 
 
