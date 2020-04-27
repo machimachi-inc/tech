@@ -1,0 +1,7 @@
+theme: jekyll-theme-primer
+title: マチマチを支える技術
+description: ご近所SNSマチマチの開発で採用している技術や理念を紹介します。
+github:
+  is_project_page: false
+  private: true
+show_downloads: false
