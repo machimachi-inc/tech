@@ -116,7 +116,7 @@ Rubyは緩めに設定したRubocop、JS/CSSはprettierで整形するPRを自�
 - docker-compose
 
 # 監視
-- New Relic
+- Scout APM
 - Stackdriver
 - Google App Engine Dashboard
 - Mackerel
