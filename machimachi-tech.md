@@ -78,6 +78,9 @@ Rubyは緩めに設定したRubocop、JS/CSSはprettierで整形するPRを自�
 
 # CI
 - CircleCI 2.1
+  - Performance Plan で並列化
+  - E2Eテストとそれ以外をワークフローで分岐し、それぞれ `resource_class` や `parallelism` をチューニング
+  - parallel_tests gem でインスタンス内のテスト実行も並列化してリソースを使い切る
 
 # デプロイ
 
