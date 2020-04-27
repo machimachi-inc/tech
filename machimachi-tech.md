@@ -25,7 +25,7 @@
 
 ## サーバー
 - Ruby 2.6 (随時最新バージョンに更新)
-- Rails 5.2 (随時最新バージョンに更新)
+- Rails 6.0 (随時最新バージョンに更新)
 - Sidekiq
 - RSpec
     - See [立ち上げ期スタートアップのテスト方針（Ruby on Rails編）](https://tech.machimachi.com/entry/2018/07/24/141144)
@@ -58,7 +58,7 @@ Rubyは緩めに設定したRubocop、JS/CSSはprettierで整形するPRを自�
 
 ## データベース
 - PostgreSQL
-  - 9.6
+  - 11
   - with PostGIS
   - on Google Cloud SQL
 - Redis
