@@ -141,12 +141,7 @@ Rubyは緩めに設定したRubocop、JS/CSSはprettierで整形するPRを自�
 
 # タスクランナー
 - Jenkins
-
-# その他使われている技術
-- Terraform
-  - Jenkinsのセットアップで使っている
-- Ansible
-  - Jenkinsのセットアップで使っている
+  - Docker化してDokku上で運用
 
 # FAQ
 - なぜRails
