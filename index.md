@@ -29,9 +29,9 @@
 # アプリケーション
 
 ## サーバー
-- Ruby 2.6 (随時最新バージョンに更新)
-- Rails 6.0 (随時最新バージョンに更新)
-- Sidekiq
+- Ruby 2.7 (随時最新バージョンに更新)
+- Rails 6.1 (随時最新バージョンに更新)
+- Sidekiq Enterprise
 - RSpec
     - See [立ち上げ期スタートアップのテスト方針（Ruby on Rails編）](https://tech.machimachi.com/entry/2018/07/24/141144)
 - etc.
